@@ -40,3 +40,6 @@ next-env.d.ts
 .flaskenv*
 !.env.project
 !.env.vault
+
+# trash
+src/app/._*
