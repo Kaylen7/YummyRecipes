@@ -1,0 +1,44 @@
+.recipeHeading2 {
+    color: var(--color-primary);
+    margin-block-end: 0px;
+  }
+  
+  .recipeUL {
+    list-style-type: none;
+    padding-inline-start: 0px;
+  }
+  
+  .recipeUL li {
+    padding-bottom: 10px;
+  }
+  
+  .recipeOL {
+    list-style-type: decimal;
+    padding-inline-start: 20px;
+  }
+  
+  .recipeOL li::marker {
+    font-weight: bold
+  }
+  
+  .recipeOL li {
+    padding-bottom: 20px;
+  }
+
+  .recipeImage {
+    width: 35%;
+    height: 300px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    right: 5em;
+    border-radius: 8px;
+    z-index: -5;
+    opacity: 0.75;
+  }
+
+  @media (max-width: 768px) {
+    .recipeImage {
+      display: none
+    }
+  }
