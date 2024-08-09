@@ -8,7 +8,7 @@ This project was meant to solve two things:
 2. Access the database with an old device which could not longer have Notion App installed.
 
 # Showcase
-I have deployed it in Vercel so feel free to take a look 😊
+I have deployed it in Vercel so feel free to take a look 😊  
 https://yummy-recipes-theta.vercel.app/
 
 # Ongoing changes
