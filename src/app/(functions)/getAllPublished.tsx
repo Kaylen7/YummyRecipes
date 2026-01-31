@@ -15,8 +15,17 @@ export async function getAllPublished (): Promise<PostType[]> {
 
   noStore();
 
-  const posts = await notion.databases.query({
+  const db = await notion.databases.retrieve({
     database_id: process.env.NEXT_PUBLIC_DATABASE_ID as string,
+  });
+  
+  const dbWithSources = db as unknown as { data_sources: { id: string }[] };
+
+  const dataSourceId = dbWithSources.data_sources[0]?.id;
+
+
+  const posts = await notion.dataSources.query({
+    data_source_id: dataSourceId,
     filter: {
       property: "title",
       title: {
