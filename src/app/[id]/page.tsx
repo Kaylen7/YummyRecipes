@@ -5,10 +5,10 @@ import Link from 'next/link';
 import { Suspense } from 'react';
 
 export default async function Page({ params }: {
-    params: {id: string}
+    params: Promise<{ id: string }>
 }) {
-    console.log(`Finding page... ${params.id}`)
-    const id = params.id;
+    const { id } = await params
+    console.log(`Finding page... ${id}`)
 
     try {
         const post = await getSinglePost(id)
